@@ -5,22 +5,21 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semi-bold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:bg-neutral-100 disabled:from-neutral-100 disabled:to-neutral-100 disabled:text-neutral-300 border border-neutral-200 shadow-sm [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:opacity-50 disabled:pointer-events-none border-2 border-purple-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         primary:
-          "bg-gradient-to-b from-blue-600 to-blue-700 text-primary-foreground hover:from-blue-700 hover:to-blue-700",
+          "bg-purple-600 text-white hover:bg-purple-700",
         destructive:
-          "bg-gradient-to-b from-amber-600 to-amber-700 text-destructive-foreground hover:from-amber=700 hover:to-amber-700",
+          "bg-red-600 text-white hover:bg-red-700",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "bg-white text-purple-600 hover:bg-purple-50",
         secondary:
-          "bg-white text-black hover:bg-neutral-100",
-        ghost: "border-transparent shadow-none hover:bg-accent hover:text-accent-foreground",
-        muted: "bg-neutral-200 text-neutral-600 hover:bg-neutral-200/80",
-        teritary: "bg-blue-100 text-blue-600 border-transparent hover:bg-blue-200 shadow-none",
-
+          "bg-white text-purple-600 hover:bg-purple-50",
+        ghost: "bg-transparent text-purple-600 hover:bg-purple-50 border-transparent shadow-none",
+        muted: "bg-purple-100 text-purple-800 hover:bg-purple-200",
+        teritary: "bg-amber-100 text-amber-800 hover:bg-amber-200 border-transparent shadow-none",
       },
       size: {
         default: "h-10 px-4 py-2",

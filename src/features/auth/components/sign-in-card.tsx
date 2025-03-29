@@ -86,13 +86,17 @@ export const SignInCard = () => {
                 </FormItem>
               )}
             />
-            <Button disabled={isPending} size="lg" className="w-full">
+            <Button disabled={isPending} type="submit" className="w-full">
               Login
             </Button>
           </form>
         </Form>
       </CardContent>
 
+      <div className="px-7">
+        <DottedSeparator />
+      </div>
+ 
       <div className="px-7">
         <DottedSeparator />
       </div>
